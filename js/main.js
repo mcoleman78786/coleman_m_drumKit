@@ -16,6 +16,9 @@
 	   	//  Rewind audio on every click and make it play
 	    audio.currentTime = 0;
 	    audio.play();
+
+	    // grab the div and animate it
+	    let key = document.querySelector(`div[data-key="${event.keyCode}"]`);
 	}
 
 	window.addEventListener("keydown", playDrumKitSound);
