@@ -28,7 +28,7 @@
 			return;
 		} else{
 			// remove the playing class here from the active div
-			console.log('transition is done');
+			console.log('transition is done!',);
 		}
 	}
 
