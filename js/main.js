@@ -22,10 +22,17 @@
 	    key.classList.add('playing');
 	}
 	function removePlayingClass(event) {
-		debugger;
+		// debugger;
+		// 
+		if (event.propertyName !== "transform") {
+			return;
+		} else{
+			// remove the playing class here from the active div
+			console.log('transition is done');
+		}
 	}
 
-	const keys = Array.from(document.querySelector('.keys'));
+	const keys = Array.from(document.querySelectorAll('.keys'));
 
 	keys.forEach(key => key.addEventListener("transitioned", removePlayingClass));
 
