@@ -19,7 +19,15 @@
 
 	    // grab the div and animate it
 	    let key = document.querySelector(`div[data-key="${event.keyCode}"]`);
+	    key.classList.add('playing');
 	}
+	function removePlayingClass(event) {
+		debugger;
+	}
+
+	const keys = Array.from(document.querySelector('.keys'));
+
+	keys.forEach(key => key.addEventListener("transitioned", removePlayingClass));
 
 	window.addEventListener("keydown", playDrumKitSound);
 })();
